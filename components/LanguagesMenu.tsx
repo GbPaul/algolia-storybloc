@@ -1,23 +1,14 @@
-import { useState } from "react";
-import { BiChevronDown, BiChevronUp } from "react-icons/bi";
-import { useHits, useMenu } from "react-instantsearch-hooks-web";
+import { useState } from "react"
+import { BiChevronDown, BiChevronUp } from "react-icons/bi"
+import { useMenu } from "react-instantsearch-hooks-web"
 
 const LanguagesMenu = (props: any) => {
-  const [listShown, setListShown] = useState<boolean>(false);
+  const [listShown, setListShown] = useState<boolean>(false)
 
-  const { attribute, title } = props;
-  const {
-    items,
-    createURL,
-    refine,
-    canRefine,
-    isShowingMore,
-    toggleShowMore,
-    canToggleShowMore,
-    sendEvent,
-  } = useMenu({ attribute });
+  const { attribute, title } = props
+  const { items, refine } = useMenu({ attribute })
 
-  const handleShowList = () => setListShown((prevState) => !prevState);
+  const handleShowList = () => setListShown((prevState) => !prevState)
 
   return (
     <div className="refinementList">
@@ -51,7 +42,7 @@ const LanguagesMenu = (props: any) => {
         </ul>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default LanguagesMenu;
+export default LanguagesMenu

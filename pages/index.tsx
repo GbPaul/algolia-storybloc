@@ -2,14 +2,13 @@ import Head from "next/head"
 import { useEffect } from "react"
 
 import algoliasearch from "algoliasearch"
-
 import { InstantSearch } from "react-instantsearch-hooks-web"
-import Hits from "../componets/Hits"
-import RefinementList from "../componets/RefinementList"
-import Menu from "../componets/Menu"
-import Search from "../componets/Search"
-import LanguagesMenu from "../componets/LanguagesMenu"
-import ToggleRefinement from "../componets/Toggle"
+import Hits from "../components/Hits"
+import RefinementList from "../components/RefinementList"
+import Menu from "../components/Menu"
+import Search from "../components/Search"
+import LanguagesMenu from "../components/LanguagesMenu"
+import ToggleRefinement from "../components/Toggle"
 
 const searchClient = algoliasearch(
   process.env.NEXT_PUBLIC_ALGOLIA_APP_ID!,

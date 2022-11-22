@@ -32,8 +32,6 @@ export default async function handler(
 
       const body = req.body
 
-      console.log({ body })
-
       const mappedData = data?.map((story: any) => {
         const todaysDate = dayjs()
 
