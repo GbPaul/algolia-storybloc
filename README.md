@@ -1,34 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# How to run this application locally on your machine
 
-## Getting Started
+Open the folder in you favorite text editor and run the commands
 
-First, run the development server:
+## In the root of the folder create a .env.local file and add the following environment variables
 
-```bash
-npm run dev
-# or
-yarn dev
+```
+STORYBLOK_CONTENT_DELIVERY_API_TOKEN
+
+ALGOLIA_APP_ID
+
+ALGOLIA_API_ADMIN_TOKEN
+
+ALGOLIA_INDEX_NAME
+
+NEXT_PUBLIC_ALGOLIA_SEARCH_ONLY_TOKEN
+
+NEXT_PUBLIC_ALGOLIA_APP_ID
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- STORYBLOK_CONTENT_DELIVERY_API_TOKEN - Your storybloc account access token
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- ALGOLIA_APP_ID - Your algolia app id
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- ALGOLIA_API_ADMIN_TOKEN - Your algolia api admin token
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- ALGOLIA_INDEX_NAME - Your algolia index name (Please make sure it is called Event)
 
-## Learn More
+- NEXT_PUBLIC_ALGOLIA_SEARCH_ONLY_TOKEN - Your algolia search only access token
 
-To learn more about Next.js, take a look at the following resources:
+- NEXT_PUBLIC_ALGOLIA_APP_ID - Your algolia app id
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## After adding the environment variables run the following commands in you terminal (Make sure you are in the actual folder)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+npm install
 
-## Deploy on Vercel
+npm run dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Happy hacking
