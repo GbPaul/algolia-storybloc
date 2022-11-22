@@ -30,6 +30,10 @@ export default async function handler(
     try {
       const data = await getStoryBlocData()
 
+      const body = req.body
+
+      console.log({ body })
+
       const mappedData = data?.map((story: any) => {
         const todaysDate = dayjs()
 
